@@ -1,0 +1,13 @@
+<div>
+  <div class="card" style="width: 25rem;">
+    <div class="card-block">
+      <h4 class="card-title">Vote Count (Max Votes 3pp)</h4>
+      <p class="card-text">Live winning votes</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <div ng-repeat="record in voteCountData.resultRecord | orderBy:'total'">
+      <li class="list-group-item" >{{record.candidate}}<p>{{record.total}}</p></li>
+    </div>
+    </ul>
+  </div>
+</div>

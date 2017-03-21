@@ -1,0 +1,13 @@
+<div>
+  <div class="card" style="width: 25rem;">
+    <div class="card-block">
+      <h4 class="card-title">Vote Percentage(%)</h4>
+      <p class="card-text">Live votes</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <div ng-repeat="record in voteCountData.resultRecord | orderBy:'total'">
+      <li class="list-group-item" >{{record.candidate}}<p>{{record.percentage}}%</p></li>
+    </div>
+    </ul>
+  </div>
+</div>

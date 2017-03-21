@@ -1,0 +1,55 @@
+<div id= "bbcDisplayboard">
+  <vote-Percentage></vote-Percentage>
+  <vote-Count></vote-Count>
+</div>
+<div class="jumbotron">
+  <h1>Live Vote!</h1>
+  <p class="lead">
+    <img src="images/bbcIcon.png"><br>
+    Exciting times, please vote now!
+  </p>
+  <p>{{Message}}</P>
+  <p><a class="btn btn-lg btn-default" ng-href="#/" data-toggle="modal" data-target="#voteModal">Vote!<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="voteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Say your words! <small> TODO service to return list of candidate</small></h4>
+      </div>
+      <div class="modal-body">
+        <div class="input-group">
+          <span class="input-group-addon">User Name</span>
+          <input type="text" ng-model="userName" class="form-control" placeholder="Username" aria-describedby="sizing-addon2"></input>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="input-group">
+          <span class="input-group-addon">Candidate</span>
+          <input type="text" ng-model="candidate" class="form-control" placeholder="candidate" aria-describedby="sizing-addon2">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" ng-click = "vote(userName, candidate)">Vote</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="row marketing">
+  <h4>HTML5 Boilerplate</h4>
+  <p>
+    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+  </p>
+
+  <h4>Angular</h4>
+  <p>
+    AngularJS is a toolset for building the framework most suited to your application development.
+  </p>
+
+  <h4>Karma</h4>
+  <p>Spectacular Test Runner for JavaScript.</p>
+</div> -->
